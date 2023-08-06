@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rdrCalendarWrapper {
+  font-size: 16px !important;
+  width: 100% !important;
+}
+
+.mapboxgl-popup-content {
+  box-shadow: none !important;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 0px;
+}
+
+.mapboxgl-map .marker {
+  transform: scale(var(--scale-factor, 1));
+  transition: transform 0.3s;
+}
+
+.mapboxgl-map.zoomed .marker {
+  --scale-factor: 1.5;
+}
+
+@layer components {
+  .header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .header::before {
+    content: var(--tw-content);
+    border-inline-start-width: 7px;
+    content: var(--tw-content);
+    --tw-border-opacity: 1;
+    border-color: rgb(249 115 22 / var(--tw-border-opacity));
+    content: var(--tw-content);
+    border-radius: 0.375rem;
+    content: var(--tw-content);
+    margin-right: 0.5rem;
+  }
+  .subtitle {
+    margin-top: 0.5rem /* 8px */;
+    margin-bottom: 0.5rem /* 8px */;
+    font-weight: 500;
+  }
+  .content {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+}
